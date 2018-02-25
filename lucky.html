@@ -1,0 +1,15 @@
+<html><head></head><body> 
+ 
+<input type="button" onclick="var count = 1; 
+for (a = 0; a < 999999; ++a) 
+{ 
+var num = a.toString(); 
+if (num.length < 6) 
+num = Array(6 - num.length + 1).join('0') + a.toString(); 
+var left = Number(num[0]) + Number(num[1]) + Number(num[2]); 
+var right = Number(num[3]) + Number(num[4]) + Number(num[5]); 
+
+if (left == right) 
+++count; 
+} 
+alert('Количество: ' + count);" value="Подсчитать количество счастливых билетов"></body></html>
